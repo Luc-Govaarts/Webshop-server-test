@@ -10,13 +10,13 @@ app.use(express.json());
 
 app.use(authRouter);
 app.use("/orders", orderRouter);
-app.use("/products", (req, res) => {
-    console.log("HALLLO")
-    res.send("HALLO") 
-})
-app.use("/", (req, res) => {
-    console.log("HALLLO")
-    res.send("HALLO") 
-})
+// app.use("/products", (req, res) => {
+//     console.log("HALLLO")
+//     res.send("HALLO") 
+// })
+// app.use("/", (req, res) => {
+//     console.log("HALLLO")
+//     res.send("HALLO") 
+// })
 
 app.listen(PORT, () => console.log(`server started on: ${PORT}`));
