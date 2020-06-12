@@ -20,12 +20,8 @@ module.exports = {
         type: Sequelize.STRING,
         allowNull: false,
       },
-      phone: {
-        type: Sequelize.INTEGER
-      },
-      adress: {
-        type: Sequelize.STRING
-      },
+      phone: DataTypes.INTEGER,
+      adress: DataTypes.STRING,
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE,

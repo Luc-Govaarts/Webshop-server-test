@@ -8,8 +8,8 @@ router.post("/signup", async (req, res, next) => {
   try {
     // expect some params
     // validate if they are there
-    const { name, email, password, phone, adress } = req.body;
-    if (!name || !email || !password || !phone || !adress) {
+    const { name, email, password, phone, address } = req.body;
+    if (!name || !email || !password || !phone || !address) {
       res.status(400).send("Missing parameters for sign up");
     } else {
       // hash password

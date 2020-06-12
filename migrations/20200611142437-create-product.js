@@ -8,18 +8,10 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      name: {
-        type: Sequelize.STRING
-      },
-      imageUrl: {
-        type: Sequelize.STRING
-      },
-      description: {
-        type: Sequelize.STRING
-      },
-      price: {
-        type: Sequelize.STRING
-      },
+      name: DataTypes.STRING,
+      imageUrl: DataTypes.STRING,
+      description: DataTypes.STRING,
+      price: DataTypes.STRING,
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE
