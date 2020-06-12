@@ -12,6 +12,18 @@ app.use("/auth", authRouter);
 app.use("/orders", orderRouter);
 app.use("/", (req, res) => {
     console.log("HALLLO")
-    res.send("server running") 
+    res.send(procducts) 
 })
+
+const procducts = [{
+    title: "oude kaas"
+},
+{
+    title: "jonge kaas"
+},
+{
+    title: "kop kaas"
+}]
+
+
 app.listen(PORT, () => console.log(`server started on: ${PORT}`));
