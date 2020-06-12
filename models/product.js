@@ -11,7 +11,7 @@ module.exports = (sequelize, DataTypes) => {
     {}
   );
   product.associate = function (models) {
-    product.belongsTo(models.category);
+    product.belongsTo(models.tag);
     product.belongsToMany(models.order, {
       through: "orderProducts",
       foreignKey: "productId",
