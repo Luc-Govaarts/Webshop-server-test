@@ -20,6 +20,12 @@ module.exports = {
         type: Sequelize.STRING,
         allowNull: false,
       },
+      phone: {
+        type: Sequelize.INTEGER
+      },
+      adress: {
+        type: Sequelize.STRING
+      },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE,
@@ -33,4 +39,4 @@ module.exports = {
   down: (queryInterface, Sequelize) => {
     return queryInterface.dropTable("users");
   },
-};
+}
