@@ -8,8 +8,8 @@ router.post("/signup", async (req, res, next) => {
   try {
     // expect some params
     // validate if they are there
-    const { name, email, password } = req.body;
-    if (!name || !email || !password) {
+    const { name, email, password, phone, adress } = req.body;
+    if (!name || !email || !password || !phone || !adress) {
       res.status(400).send("Missing parameters for sign up");
     } else {
       // hash password
@@ -17,7 +17,7 @@ router.post("/signup", async (req, res, next) => {
 
       console.log("passwords", password, hashedPassword);
       // create user.
-      const user = await User.create({ name, email, password: hashedPassword });
+      const user = await User.create({ name, email, password: hashedPassword, phone, adress });
 
       res.send(user);
     }
