@@ -11,6 +11,6 @@ app.use(express.json());
 app.use("/auth", authRouter);
 app.use("/orders", orderRouter);
 app.use("/", (req, res) => {
-    return "server running"
+    res.send("server running") 
 })
-app.listen(PORT, () => console.log("server started"));
+app.listen(PORT, () => console.log(`server started on: ${PORT}`));
