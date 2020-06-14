@@ -3,14 +3,34 @@ const bcrypt = require("bcrypt");
 
 module.exports = {
   up: (queryInterface, Sequelize) => {
-    return queryInterface.bulkInsert("categories", [
+    return queryInterface.bulkInsert("tags", [
       {
-        title: "Home",
+        title: "Pittig",
         createdAt: new Date(),
         updatedAt: new Date(),
       },
       {
-        title: "Work",
+        title: "Romig",
+        createdAt: new Date(),
+        updatedAt: new Date(),
+      },
+      {
+        title: "Vol",
+        createdAt: new Date(),
+        updatedAt: new Date(),
+      },
+      {
+        title: "Hard",
+        createdAt: new Date(),
+        updatedAt: new Date(),
+      },
+      {
+        title: "Rood flora",
+        createdAt: new Date(),
+        updatedAt: new Date(),
+      },
+      {
+        title: "Romig",
         createdAt: new Date(),
         updatedAt: new Date(),
       },
